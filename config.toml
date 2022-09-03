@@ -1,0 +1,11 @@
+theme = "emacs"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[keys.normal]
+"C-a" = "goto_first_nonwhitespace"
+"C-e" = "goto_line_end"
+
+[keys.insert]
+"C-f" = "normal_mode"
