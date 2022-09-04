@@ -1,5 +1,9 @@
 theme = "emacs"
 
+[editor]
+idle-timeout = 0
+completion-trigger-len = 1
+
 [editor.cursor-shape]
 insert = "bar"
 
@@ -8,4 +12,5 @@ insert = "bar"
 "C-e" = "goto_line_end"
 
 [keys.insert]
+"C-a" = "goto_first_nonwhitespace"
 "C-f" = "normal_mode"
