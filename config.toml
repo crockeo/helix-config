@@ -7,6 +7,9 @@ completion-trigger-len = 1
 [editor.cursor-shape]
 insert = "bar"
 
+[editor.file-picker]
+hidden = false  # enable finding dotfiles
+
 [keys.normal]
 "C-a" = "goto_first_nonwhitespace"
 "C-e" = "goto_line_end"
