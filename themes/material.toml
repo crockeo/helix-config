@@ -1,0 +1,27 @@
+"comment" = "#424242"
+"keyword" = { fg = "#550087", modifiers = ["bold"] }
+"string" = "#f5971d"
+"type" = { fg = "#134eb2", modifiers = ["bold"] }
+
+"ui.background" = { bg = "#eaeaea" }
+"ui.cursor.primary" = { bg = "#16aec9" }
+"ui.selection" = { bg = "#c1c1c1" }
+"ui.text" = "#212121"
+
+
+# color0                #212121  # black
+# color1                #b7141e  # red 
+# color2                #457b23  # green
+# color3                #f5971d  # yellow
+# color4                #134eb2  # blue
+# color5                #550087  # magenta
+# color6                #0e707c  # cyan
+# color7                #eeeeee  # white
+# color8                #424242  # bright black
+# color9                #e83a3f  # bright red
+# color10               #7aba39  # bright green
+# color11               #fee92e  # bright yellow
+# color12               #53a4f3  # bright blue
+# color13               #a94dbb  # bright magenta
+# color14               #26bad1  # bright cyan
+# color15               #d8d8d8  # bright white

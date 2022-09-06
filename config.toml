@@ -1,4 +1,4 @@
-theme = "emacs"
+theme = "monokai_pro"
 
 [editor]
 idle-timeout = 100
