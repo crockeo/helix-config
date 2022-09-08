@@ -1,8 +1,9 @@
 theme = "monokai_pro"
 
 [editor]
-idle-timeout = 100
-completion-trigger-len = 1
+completion-trigger-len = 3
+idle-timeout = 200
+line-number = "relative"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -11,6 +12,14 @@ insert = "bar"
 hidden = false  # enable finding dotfiles
 
 [keys.normal]
+# makes `a` function like `a` in vim
+# instead of starting a new selection
+"a" = [
+  "ensure_selections_forward",
+  "collapse_selection",
+  "move_char_right",
+  "insert_mode"
+]
 "C-a" = "goto_first_nonwhitespace"
 "C-e" = "goto_line_end"
 
