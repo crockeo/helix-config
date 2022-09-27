@@ -1,4 +1,5 @@
-# [[language]]
-# name = "python"
-# language-server = { command = "pyright-python-langserver", args = ["--stdio"] }
-# auto-format = false
+[[language]]
+name = "python"
+language-server = { command = "pyright-python-langserver", args = ["--stdio"] }
+auto-format = false
+config = {}
