@@ -27,4 +27,15 @@ hidden = false  # enable finding dotfiles
 
 [keys.insert]
 "C-a" = "goto_first_nonwhitespace"
+"C-e" = [
+  # Need to move 1 char right because in insert mode
+  # goto_line_end moves one char back from the end of the line.
+  "goto_line_end",
+  "move_char_right"
+]
+"C-f" = "normal_mode"
+
+[keys.select]
+"C-a" = "goto_first_nonwhitespace"
+"C-e" = "goto_line_end"
 "C-f" = "normal_mode"
