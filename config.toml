@@ -34,6 +34,7 @@ hidden = false  # enable finding dotfiles
   "move_char_right"
 ]
 "C-f" = "normal_mode"
+"C- " = "completion"
 
 [keys.select]
 "C-a" = "goto_first_nonwhitespace"
