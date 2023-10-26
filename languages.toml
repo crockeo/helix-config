@@ -1,5 +1,12 @@
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
 [[language]]
 name = "python"
-language-server = { command = "pyright-langserver", args = ["--stdio"] }
+language-servers = [{ name = "pyright" }]
 auto-format = false
-config = {}
+
+[[language]]
+name = "elixir"
+auto-format = true
