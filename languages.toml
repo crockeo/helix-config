@@ -10,3 +10,12 @@ auto-format = false
 [[language]]
 name = "elixir"
 auto-format = true
+[[language]]
+name = "typescript"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+
+[[language]]
+name = "tsx"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "typescript"] }

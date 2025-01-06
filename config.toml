@@ -16,13 +16,14 @@ hidden = false  # enable finding dotfiles
 # makes `a` function like `a` in vim
 # instead of starting a new selection
 "a" = [
-  "ensure_selections_forward",
-  "collapse_selection",
   "move_char_right",
   "insert_mode"
 ]
 "C-a" = "goto_first_nonwhitespace"
 "C-e" = "goto_line_end"
+
+[keys.normal."space"]
+"o" = "file_picker_in_current_buffer_directory"
 
 [keys.insert]
 "C-a" = "goto_first_nonwhitespace"
