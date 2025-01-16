@@ -1,15 +1,24 @@
-[language-server.pyright]
-command = "pyright-langserver"
-args = ["--stdio"]
+[language-server.ruff-lsp]
+command = "ruff-lsp"
+args = []
+
+[language-server.godot]
+command = "nc"
+args = ["127.0.0.1", "6005"]
 
 [[language]]
 name = "python"
-language-servers = [{ name = "pyright" }]
-auto-format = false
+language-servers = [{ name = "pyright" }, {name = "ruff-lsp"}]
+auto-format = true
 
 [[language]]
 name = "elixir"
 auto-format = true
+
+[[language]]
+name = "gdscript"
+language-servers = [{ name = "godot" }]
+
 [[language]]
 name = "typescript"
 auto-format = true
