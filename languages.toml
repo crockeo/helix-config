@@ -1,3 +1,31 @@
+[language-server.lsp-ai]
+command = "lsp-ai"
+
+[language-server.lsp-ai.config]
+memory = { file_store = {} }
+
+[language-server.lsp-ai.config.completion]
+model = "gpt"
+
+[language-server.lsp-ai.config.completion.parameters]
+max_context = 1800
+max_tokens = 32
+parameters = {}
+
+[[language-server.lsp-ai.config.completion.parameters.messages]]
+role = "system"
+content = "Instructions:\n- You are an AI programming assistant.\n- Given a piece of code with the cursor location marked by \"<CURSOR>\", replace \"<CURSOR>\" with the correct code or comment.\n- First, think step-by-step.\n- Describe your plan for what to build in pseudocode, written out in great detail.\n- Then output the code replacing the \"<CURSOR>\"\n- Ensure that your completion fits within the language context of the provided code snippet (e.g., Python, JavaScript, Rust).\n\nRules:\n- Only respond with code or comments.\n- Only replace \"<CURSOR>\"; do not include any previously written code.\n- Never include \"<CURSOR>\" in your response\n- If the cursor is within a comment, complete the comment meaningfully.\n- Handle ambiguous cases by providing the most contextually appropriate completion.\n- Be consistent with your responses."
+
+[[language-server.lsp-ai.config.completion.parameters.messages]]
+role = "user"
+content = "{CODE}"
+
+[language-server.lsp-ai.config.models.gpt]
+type = "open_ai"
+chat_endpoint = "https://api.openai.com/v1/chat/completions"
+model = "gpt-4o-mini-2024-07-18"
+auth_token_env_var_name = "OPENAI_API_KEY"
+
 [language-server.ruff-lsp]
 command = "ruff-lsp"
 args = []
@@ -8,7 +36,7 @@ args = ["127.0.0.1", "6005"]
 
 [[language]]
 name = "python"
-language-servers = [{ name = "pyright" }, {name = "ruff-lsp"}]
+language-servers = [{ name = "pyright" }, {name = "ruff-lsp"}, {name = "lsp-ai"}]
 auto-format = true
 
 [[language]]
