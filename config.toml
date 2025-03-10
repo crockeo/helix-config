@@ -1,4 +1,4 @@
-theme = "monokai_pro"
+theme = "catppuccin_macchiato"
 
 [editor]
 auto-pairs = false
