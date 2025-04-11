@@ -23,9 +23,7 @@ hidden = false  # enable finding dotfiles
 "C-e" = "goto_line_end"
 
 [keys.normal."space"]
-# Copies the current filename into the buffer.
-# This could be better, but I think it needs changes in Helix.
-"o" = "@\"%pYd<up>"
+"o" = "@\"%p Yu"
 
 [keys.insert]
 "C-a" = "goto_first_nonwhitespace"
