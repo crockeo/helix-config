@@ -1,15 +1,15 @@
-[language-server.ruff-lsp]
-command = "ruff-lsp"
-args = []
-
 [language-server.godot]
 command = "nc"
 args = ["127.0.0.1", "6005"]
 
+[language-server.ruff-lsp]
+command = "ruff-lsp"
+args = []
+
 [[language]]
-name = "python"
-language-servers = [{ name = "pyright" }, {name = "ruff-lsp"}]
+name = "css"
 auto-format = true
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "test.css"] }
 
 [[language]]
 name = "elixir"
@@ -20,11 +20,26 @@ name = "gdscript"
 language-servers = [{ name = "godot" }]
 
 [[language]]
+name = "html"
+auto-format = true
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "test.json"] }
+auto-format = true
+
+[[language]]
+name = "json"
+auto-format = true
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "test.json"] }
+
+[[language]]
+name = "python"
+language-servers = [{ name = "pyright" }, {name = "ruff-lsp"}]
+
+[[language]]
 name = "typescript"
 auto-format = true
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "test.ts"] }
 
 [[language]]
 name = "tsx"
 auto-format = true
-formatter = { command = "prettier", args = ["--parser", "typescript"] }
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "test.tsx"] }
