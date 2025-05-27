@@ -23,7 +23,6 @@ language-servers = [{ name = "godot" }]
 name = "html"
 auto-format = true
 formatter = { command = "biome", args = ["format", "--stdin-file-path", "test.json"] }
-auto-format = true
 
 [[language]]
 name = "json"
@@ -33,6 +32,7 @@ formatter = { command = "biome", args = ["format", "--stdin-file-path", "test.js
 [[language]]
 name = "python"
 language-servers = [{ name = "pyright" }, {name = "ruff-lsp"}]
+auto-format = true
 
 [[language]]
 name = "typescript"
